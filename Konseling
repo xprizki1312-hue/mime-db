@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsultasi Mahasiswa - Konselor [Nama Anda]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 50px 0; }
+        .form-container { max-width: 600px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+    <header class="hero text-center">
+        <div class="container">
+            <h1>Selamat Datang di Layanan Konsultasi Mahasiswa</h1>
+            <p>Berkonsultasi dengan [Nama Anda], Konselor Mahasiswa. Kami siap membantu Anda dengan masalah akademik, pribadi, atau lainnya.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <section id="about" class="mb-5">
+            <h2>Tentang Layanan</h2>
+            <p>Layanan konsultasi ini tersedia untuk mahasiswa yang membutuhkan bimbingan. Isi formulir di bawah untuk memulai konsultasi. Kami menjaga kerahasiaan Anda.</p>
+        </section>
+
+        <section id="consultation-form" class="form-container">
+            <h2>Formulir Konsultasi</h2>
+            <form id="consultForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="issue" class="form-label">Jenis Masalah (e.g., Akademik, Pribadi)</label>
+                    <input type="text" class="form-control" id="issue" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Pesan Detail</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Kirim Konsultasi</button>
+            </form>
+        </section>
+
+        <section id="contact" class="mt-5 text-center">
+            <h2>Kontak</h2>
+            <p>Email: [email@anda.com] | Telepon: [nomor telepon Anda]</p>
+            <p>Jadwal Konsultasi: Senin-Jumat, 09:00-17:00</p>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Layanan Konsultasi Mahasiswa. Dibuat untuk membantu mahasiswa.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('consultForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const issue = document.getElementById('issue').value;
+            const message = document.getElementById('message').value;
+            
+            // Simulasi pengiriman (ganti dengan layanan email seperti Formspree atau backend)
+            alert(`Terima kasih, ${name}! Konsultasi Anda telah dikirim. Kami akan menghubungi Anda di ${email}.`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
